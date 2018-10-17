@@ -7,11 +7,15 @@ class Conexion{
         $user = "ew";
         $pass = "ew";
         $db = "ew";
+        try{
+            $conexion = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+            
+            return $conexion;
         
-        $conexion = new PDO("mysql:host=$host;dbname=$db", $user, $pass); //"mysql:host=$servername;dbname=$db"
-        echo "Connected successfully";
-        
-        return $conexion;
+        }catch (PDOException $e) {
+            print "¡Error!: " . $e->getMessage() . "<br/>";
+            
+        }
         
     }
 }   
