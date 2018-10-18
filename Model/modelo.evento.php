@@ -1,6 +1,6 @@
 <?php
 
-    class modelo{
+    class modeloEvento{
         public function insertarEvento($arg_nombre,$arg_calle,$arg_ciudad,$arg_estadio,$arg_cartelPromocional,$arg_rutaFotoTitulo,$arg_rutaVideoTrailer,$arg_rutaVideoClausura = "",$arg_rutaFotoResultado = ""){
 
             $modelo = new Conexion();
