@@ -36,14 +36,15 @@
             $sql = "select * from evento";
             $statement = $conexion->prepare($sql);
             if(!$statement){
+                return null;               
+            }else{
+
                 $statement->execute(); 
 
                 while($result = $statement->fetch()){
                     $rows[] = $result;
                 }
                 return $rows;
-            }else{
-                return null;
             }
         }
 
